@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { Client, EmbedBuilder, Events } from 'discord.js';
-import { scrapeMatchups } from './helpers/scrapeMatchups';
+import { scrapeMatchups } from './helpers/scrape';
 
 console.log('Bot is starting...');
 
@@ -23,10 +23,10 @@ client.on('messageCreate', async (message) => {
                 name: 'RL Worlds Playoffs Bot',
                 iconURL:
                     'https://static.wikia.nocookie.net/rocketleague/images/9/97/RLCS_decal_icon.png/revision/latest?cb=20170602233629',
-                url: 'https://discord.js.org', // Replace BOT_IMAGE_LINK with an appropriate image if desired
+                url: 'https://discord.js.org', // TODO : make a logo for the bot
             })
             .setDescription('Latest matchups from Liquipedia:')
-            .setThumbnail('https://www.breakflip.com/uploads/64afcb82523d4-date-worlds-rocket-league-2023.jpg') // Replace with Rocket League or relevant logo
+            .setThumbnail('https://www.breakflip.com/uploads/64afcb82523d4-date-worlds-rocket-league-2023.jpg')
             .setTimestamp()
             .setFooter({
                 text: 'Matchups updated',
